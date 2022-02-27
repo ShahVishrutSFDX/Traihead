@@ -1,10 +1,7 @@
 @isTest
 public class AccountProcessorTest {
-
-  
-    @testSetup
-    
-    static void setupAccount(){
+  @testSetup
+   static void setupAccount(){
         	List<Account> accts = TestDataFactory.createAccounts(5); 
         	insert accts;
      List<contact> cnt= new List<contact>();	  
@@ -14,7 +11,7 @@ public class AccountProcessorTest {
         insert cnt;
     }
     @isTest
-    static void AccountProcessorTest(){
+    static void accountProcessorTest(){
         List<ID> acctsID = new List<ID>();
         
         for(Account acc : [Select id from Account]){
